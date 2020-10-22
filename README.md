@@ -1,2 +1,3 @@
-# ChessBoard
- 
+## ChessBoard
+
+run ChessBoardMain.py
