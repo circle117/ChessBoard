@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 def chessBoard(array_board, row, col, cur_row, cur_col, size):
     """
@@ -6,6 +7,7 @@ def chessBoard(array_board, row, col, cur_row, cur_col, size):
     """
     if size==1:
         return
+    global num
     num += 1
     t = num
     s = size//2
@@ -36,6 +38,21 @@ def chessBoard(array_board, row, col, cur_row, cur_col, size):
     return array_board
 
 if __name__=="__main__":
-    size = 8
-    chessBoard(0,0,2,2,size)
-    print(array_board)
+    while(True):
+        size, x, y = map(int, input("输入棋盘大小及坐标：").split(' '))
+        size = int(math.pow(2,size))
+        num = 0
+        array_board = np.zeros((size,size), dtype='int32')
+        chessBoard(array_board,0,0,x-1,y-1,size)
+        #print(array_board)
+        for i in range(size):
+            for j in range(size-1):
+                if array_board[i,j]==0:
+                    print("#",end=" ")
+                else:
+                    print(array_board[i,j],end=' ')
+            if array_board[i,size-1]==0:
+                print("#",end=" ")
+            else:
+                print(array_board[i,size-1],end=' ')
+            print()
