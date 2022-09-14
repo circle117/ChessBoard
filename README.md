@@ -8,13 +8,13 @@ run ChessBoardMain.py
 
 ### Input
 
-Input three integers:
+Input three integers
 
-k - 2^k is the size of the chessboard
+* k: 2^k is the size of the chessboard
 
-x - the row number of the special point
+* x: the row number of the special point
 
-y - the column number of the special point
+* y: the column number of the special point
 
 ![app1](./img/app1.JPEG)
 
